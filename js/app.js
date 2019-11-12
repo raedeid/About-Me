@@ -10,9 +10,9 @@ alert('Please answer my question by type Yes or No')
 var name 
 name = prompt ('My name Rashid Saqr Musa Alsawalqa ?? ');
 name = name.toUpperCase(); 
-if (name == 'YES') {
+if (name == 'YES' || name == 'Y') {
     alert('Burfict answer + 1')
-  } else if (name == 'NO') {
+  } else if (name == 'NO' || name == 'N') {
     alert('wrong answer + 0')
   }
   //console.log('My name Rashid Saqr Musa Alsawalqa ?? ');
@@ -20,9 +20,9 @@ if (name == 'YES') {
   var age 
   age = prompt ('I\'am 30 years old ?? ');
   age = age.toUpperCase();
-if (age == 'YES') {
+if (age == 'YES' || age == 'Y') {
     alert('Wrong answer + 0')
-  } else if (age == 'NO') {
+  } else if (age == 'NO' || age == 'N') {
     alert('Burfict answer + 1')
   }
   //console.log('I\'am 30 years old ?? ');
@@ -30,9 +30,9 @@ if (age == 'YES') {
   var student  
   student  = prompt ('I still a student in mutah university ?? ');
   student = student.toUpperCase();
-if (student  == 'YES') {
+if (student  == 'YES' || student == 'Y') {
     alert('Wrong answer + 0')
-  } else if (student  == 'NO') {
+  } else if (student  == 'NO' || student == 'N') {
     alert('Burfict answer + 1')
   }
   //console.log('I still a student in mutah university ?? ');
@@ -40,9 +40,9 @@ if (student  == 'YES') {
   var game  
   game  = prompt (' Did i Love VideoGames ??? ');
   game = game.toUpperCase();
-if (game  == 'YES') {
+if (game  == 'YES' || game == 'Y') {
     alert('Burfict answer + 1')
-  } else if (game  == 'NO') {
+  } else if (game  == 'NO' || game == 'N') {
     alert('Wrong answer + 0')
   }
   //console.log(' Did i Love VideoGames ??? ');
@@ -50,9 +50,9 @@ if (game  == 'YES') {
   var javaScript  
   javaScript  = prompt (' Did i love JavaScript ??? ');
   javaScript = javaScript.toUpperCase();
-if (javaScript  == 'YES') {
+if (javaScript  == 'YES' || javaScript == 'Y') {
     alert('Wrong answer + 0')
-  } else if (javaScript  == 'NO') {
+  } else if (javaScript  == 'NO' || javaScript == 'N') {
     alert('Burfict answer + 1')
   }
   //console.log(' Did i love JavaScript ??? ');
