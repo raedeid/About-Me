@@ -15,7 +15,7 @@ if (name == 'YES') {
   } else if (name == 'NO') {
     alert('wrong answer + 0')
   }
-  //console.log(name);
+  //console.log('My name Rashid Saqr Musa Alsawalqa ?? ');
 
   var age 
   age = prompt ('I\'am 30 years old ?? ');
@@ -25,7 +25,7 @@ if (age == 'YES') {
   } else if (age == 'NO') {
     alert('Burfict answer + 1')
   }
-  //console.log(age);
+  //console.log('I\'am 30 years old ?? ');
 
   var student  
   student  = prompt ('I still a student in mutah university ?? ');
@@ -35,7 +35,7 @@ if (student  == 'YES') {
   } else if (student  == 'NO') {
     alert('Burfict answer + 1')
   }
-  //console.log(student);
+  //console.log('I still a student in mutah university ?? ');
 
   var game  
   game  = prompt (' Did i Love VideoGames ??? ');
@@ -45,17 +45,17 @@ if (game  == 'YES') {
   } else if (game  == 'NO') {
     alert('Wrong answer + 0')
   }
-  //console.log(game);
+  //console.log(' Did i Love VideoGames ??? ');
 
-  var JavaScript  
-  JavaScript  = prompt (' Did i love JavaScript ??? ');
-  JavaScript = JavaScript.toUpperCase();
-if (JavaScript  == 'YES') {
+  var javaScript  
+  javaScript  = prompt (' Did i love JavaScript ??? ');
+  javaScript = javaScript.toUpperCase();
+if (javaScript  == 'YES') {
     alert('Wrong answer + 0')
-  } else if (JavaScript  == 'NO') {
+  } else if (javaScript  == 'NO') {
     alert('Burfict answer + 1')
   }
-  //console.log(JavaScript);
+  //console.log(' Did i love JavaScript ??? ');
   
 
   alert(' Thank you ' + user );
