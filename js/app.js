@@ -84,7 +84,7 @@ for (var i = 0; i <= 3; i++) {
   } else if (number > 4) {
     alert('Too high')
   
-  } else if (i = 4){
+  } else if (i == 4){
     alert('the number was "4"')
   }
 }
