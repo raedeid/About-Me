@@ -1,96 +1,8 @@
 'use strict'
-
-var user = prompt('wht\'s your name');
-
-alert('Welcome to my website ' + user);
-alert('Please answer my question by type Yes or No')
-
-
-var points =0;
-var name
-name = prompt('My name Rashid Saqr Musa Alsawalqa ?? ');
-name = name.toUpperCase();
-if (name == 'YES' || name == 'Y') {
-  alert('Burfict answer + 1')
-  points++;
-} else if (name == 'NO' || name == 'N') {
-  alert('wrong answer + 0')
-}
-//console.log('My name Rashid Saqr Musa Alsawalqa ?? ');
-
-var age
-age = prompt('I\'am 30 years old ?? ');
-age = age.toUpperCase();
-if (age == 'YES' || age == 'Y') {
-  alert('Wrong answer + 0')
-} else if (age == 'NO' || age == 'N') {
-  alert('Burfict answer + 1')
-  points++;
-}
-//console.log('I\'am 30 years old ?? ');
-
-var student
-student = prompt('I still a student in mutah university ?? ');
-student = student.toUpperCase();
-if (student == 'YES' || student == 'Y') {
-  alert('Wrong answer + 0')
-} else if (student == 'NO' || student == 'N') {
-  alert('Burfict answer + 1')
-  points++;
-}
-//console.log('I still a student in mutah university ?? ');
-
-var game
-game = prompt(' Did i Love VideoGames ??? ');
-game = game.toUpperCase();
-if (game == 'YES' || game == 'Y') {
-  alert('Burfict answer + 1')
-  points++;
-} else if (game == 'NO' || game == 'N') {
-  alert('Wrong answer + 0')
-}
-//console.log(' Did i Love VideoGames ??? ');
-
-var javaScript
-javaScript = prompt(' Did i love JavaScript ??? ');
-javaScript = javaScript.toUpperCase();
-if (javaScript == 'YES' || javaScript == 'Y') {
-  alert('Wrong answer + 0')
-} else if (javaScript == 'NO' || javaScript == 'N') {
-  alert('Burfict answer + 1')
-  points++;
-}
-//console.log(' Did i love JavaScript ??? ');
-
-
-alert("Now you will play guess the number game ");
-alert("You have four attempts to guess the correct number ");
-alert("So be Careful ;)");
-
-var number
-
-for (var i = 0; i <= 3; i++) {
-  var number = prompt('put the number'); {
-
-  } if (number == 4) {
-    alert('Great you did it the number was "4"  +1 ')
-    points++;
-    i = 4;
-
-  } else if (number < 4) {
-    alert('Too low')
-
-
-  } else if (number > 4) {
-    alert('Too high')
-  
-  } else if (i == 4){
-    alert('the number was "4"')
-  }
-}
-
-
-
+var points = 0
+var question = ['My name Rashid Saqr Musa Alsawalqa ?? ', 'I\'am 30 years old ??', 'I still a student in mutah university ??', 'Did i Love VideoGames ??? ', ' Did i love JavaScript ??? '];
+var answer_yes = ['Burfict answer + 1', 'Wrong answer + 0', 'Wrong answer + 0', 'Burfict answer + 1', 'Wrong answer + 0'];
+var answer_no = ['wrong answer + 0', 'Burfict answer + 1', 'Burfict answer + 1', 'Wrong answer + 0', 'Burfict answer + 1'];
 var games = ['devil may cry',
   'bloodborne',
   'need for speed',
@@ -101,28 +13,93 @@ var games = ['devil may cry',
   'grand theft auto v',
   'the last of us',
   'shadow of mordor'];
-  for (var i = 0; i <= 5; i++) {
-    var gaming = prompt('What\'s My Favorite games ??? '); 
-  if (gaming === games[i]) {
-     alert('You got it ' +user+ ' Congratulations +1 ');
-     points++;
-      i = 6; }
-            
-  else if (gaming !== games[i]) {
-   alert('wrong answer. try again');
 
+function Q1_5(list_q, list_yes, list_no, grade) {
+  for (var i = 0; i < 5; i++) {
+    var ask = prompt(list_q[i]).toUpperCase();
+    if (ask == 'YES' || ask == 'Y') {
+      alert(list_yes[i]);
+      grade++;
+    } else if (name == 'NO' || name == 'N') {
+      alert(list_no[i]);
+    }
+  }
+  return grade
+}
+
+
+function q_6() {
+  for (var i = 0; i <= 3; i++) {
+    var number = prompt('put the number');
+    var p = 0
+    if (number == 4) {
+      alert('Great you did it the number was "4"  +1 ');
+      i = 4;
+      return p++;
+    } else if (number < 4) {
+      alert('Too low');
+
+
+    } else if (number > 4) {
+      alert('Too high');
+
+    } else if (i == 4) {
+      alert('the number was "4"');
+    }
   }
 }
+
+function q_7(list_games) {
+  var flag = true ;
+  var i = 0 ;
+  while (flag && i < 6 ) {
+    var gaming = prompt('What\'s My Favorite games ??? ');
+    if (check(gaming,list_games)){
+      flag = false;
+      return 1;
+    }else if (flag) {
+      alert('wrong answer. try again');
+    }else if (i == 6){
+      alert('you loose all chance');
+    }
+   }i++;  
+  }
+
+function check(params,list_of_games) {
+  for (var iteration = 0; iteration < list_of_games.length; iteration++){
+    if (params === list_of_games[iteration]) {
+      alert('You got it ' + user + ' Congratulations +1 ');
+      return true;
+      
+    }
+  }
+}
+var user = prompt('wht\'s your name');
+
+alert('Welcome to my website ' + user);
+alert('Please answer my question by type Yes or No');
+
+
+
+points = points + Q1_5(question, answer_yes, answer_no)
+
+alert("Now you will play guess the number game ");
+alert("You have four attempts to guess the correct number ");
+alert("So be Careful ;)");
+
+points = points + q_6()
+
+points = points + q_7(games)
 alert('devil may cry ',
-'bloodborne ',
-'need for speed ',
-'resident evil ',
-'battlefield ',
-'god of war ',
-'black desert online ',
-'grand theft auto v ',
-'the last of us ',
-'shadow of mordor ')
-alert('Your Score is ' +points+ '/7 ..')
+  'bloodborne ',
+  'need for speed ',
+  'resident evil ',
+  'battlefield ',
+  'god of war ',
+  'black desert online ',
+  'grand theft auto v ',
+  'the last of us ',
+  'shadow of mordor ')
+alert('Your Score is ' + points + '/7 ..')
 alert(' Thank you ' + user);
 
